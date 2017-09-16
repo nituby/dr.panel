@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+// @import '~bootstrap/dist/css/bootstrap.min.css';
+
+html {
+    font-size: 14px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,400i,500,700|PT+Sans:400,500,700');
+
+
+// Include bootstrap
+@import "~bootstrap/scss/bootstrap";
+@import "variables";
+@import "headings";
+@import "sidebar";
+// @import '~bootstrap/scss/_variables.scss';
+@import "header";
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: $font-family-sans-serif;
+}
+
+.btn {
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.8rem;
+}
+
+.padded {
+    padding: 0.75rem;
+}
+
+.secondary-font {
+    font-family: $secondary-font-family;
+}
+
+.angular-loading {
+    padding: 10px;
+}

@@ -1,0 +1,68 @@
+// Features
+$enable-shadows: true;
+$enable-gradients: true;
+
+// Colors
+$buzzyears-light-gray: #EFF1F7;
+$buzzyears-dark-gray: #E3E6EE;
+
+$state-success-text: #3CB2A0;
+$state-success-bg: #B4E9E0;
+
+$brand-primary: #143C56;
+$brand-secondary: #E25B36;
+$brand-secondary-light: #F9E3DC;
+$brand-success: #4DC9B6;
+
+$btn-secondary-color: #FFF;
+$btn-secondary-bg: #68747A;
+$btn-secondary-border: #68747A;
+
+$btn-primary-color: #FFF;
+$btn-primary-bg: $brand-secondary;
+$btn-primary-border: $brand-secondary;
+
+$table-head-bg: $buzzyears-dark-gray;
+
+$pagination-active-bg: $brand-secondary;
+$pagination-active-border: $brand-secondary;
+
+$link-color: #0275d8;
+
+// Fonts
+$headings-font-family: "PT Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-sans-serif: "PT Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$secondary-font-family: "Cabin", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+
+// Header
+$buzzyears-header-logo-height: 2.5rem;
+$buzzyears-header-logo-width: $buzzyears-header-logo-height;
+$buzzyears-header-padding: 0.75rem;
+$buzzyears-header-height: $buzzyears-header-logo-height + $buzzyears-header-padding + $buzzyears-header-padding;
+
+$buzzyears-header-icon-height: 3rem;
+
+// Sidebar
+$buzzyears-sidebar-full-width: 15rem;
+$buzzyears-sidebar-short-width: 3rem;
+$buzzyears-sidebar-transition: all 0.5s ease;
+
+// Block
+$buzzyears-block-bg: #fff;
+$buzzyears-block-border: 2px $buzzyears-light-gray solid;
+$buzzyears-block-border-radius: 0.5rem;
+
+
+// Modal
+$modal-backdrop-bg: #fff;
+$modal-backdrop-opacity: .9;
+
+// Lists
+
+$list-group-item-padding-x: 0.75rem;
+$list-group-item-padding-y: 0.3rem;
+
+// Cards
+
+$card-spacer-x: 1rem;
+$card-spacer-y: .5rem;

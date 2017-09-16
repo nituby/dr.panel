@@ -1,0 +1,89 @@
+
+
+.buzzyears-header {
+
+  height: $buzzyears-header-height;
+
+  .navbar-brand img {
+    height: $buzzyears-header-logo-height;
+  }
+
+  .navbar {
+    // Always show the nav bar items.
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .navbar-nav {
+    .nav-link {
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+  }
+
+  .user-menu {
+    width: $buzzyears-header-logo-width + 2rem;
+    text-align: right;
+  }
+
+  .avatar {
+
+    text-decoration: none;
+    color: $buzzyears-light-gray;
+
+    img {
+      height: $buzzyears-header-logo-height;
+      width: $buzzyears-header-logo-width;
+      border-radius: $buzzyears-header-logo-height;
+
+      display: inline-block;
+      border: 2px $buzzyears-light-gray solid;
+      background-color: #fff;
+    }
+  }
+
+  a.action {
+
+    img.icon {
+      height: $buzzyears-header-icon-height;
+
+
+      opacity: 0.7;
+      transition: all 0.5s ease;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .dropdown.show {
+    .action {
+      img.icon {
+        opacity: 1;
+      }
+    }
+  }
+
+  .links {
+
+  }
+
+  .dropdown {
+
+    display: inline-block;
+
+    .badge {
+      position: relative;
+      left: -0.75rem;
+    }
+  }
+
+}
