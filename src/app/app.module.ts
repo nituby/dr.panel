@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './chart/header.component';
@@ -15,6 +15,8 @@ import { GraphDrawComponent } from './graph-info/graph-draw.component';
 import { GraphInputComponent } from './graph-info/graph-input.component';
 import { GraphPublishComponent } from './graph-info/graph-publish.component';
 import { SelectChartComponent } from './select-chart/select-chart.component';
+import { AngularMultiSelectModule } from 'angular2-multiselect-checkbox-dropdown/angular2-multiselect-dropdown';
+// import { UIFormSelectModule } from './shared/select/ui-form-select.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +35,9 @@ import { SelectChartComponent } from './select-chart/select-chart.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularMultiSelectModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
