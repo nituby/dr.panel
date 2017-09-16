@@ -15,23 +15,26 @@ export class GraphDrawComponent extends GoogleChartComponent{
   // }
 
   drawGraph(){
+
+
+    
     console.log("DrawGraph Evolution...");  
     this.data = this.createDataTable([
-      ['Evolution', 'Imports', 'Exports'],
-      ['A', 8695000, 6422800],
-      ['B', 3792000, 3694000],
-      ['C', 8175000, 800800]
+      ['Evolution', 'A1`'],
+      ['FA1', 8695000],
+      ['FA2', 3792000],
+      ['FA3', 8175000]
     ]);
 
     this.options = {
-      title: 'Evolution, 2014',
+      title: 'Performance in Categories for a subject',
       chartArea: {width: '50%'},
       hAxis: {
-        title: 'Value in USD',
+        // title: 'Value in USD',
         minValue: 0
       },
       vAxis: {
-        title: 'Members'
+        // title: 'Members'
       }
     };
 
