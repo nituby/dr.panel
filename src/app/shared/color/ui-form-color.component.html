@@ -1,0 +1,22 @@
+<div [ngClass]="{'ui-form-color':true, 'disabled-color':disabled}" [attr.disabled]="true">
+  <div [ngClass]="{'color-box-container': standalone}">
+    <div [style.width]="getColorBoxWidth()" class="color-box">
+      <div *ngFor="let colorGroup of colors" class="color-palette-group">
+        <div style="display:inline-block" *ngFor="let color of colorGroup">
+          <div [style.width]="getPaletteWidth()" [style.height]="getPaletteHeight()"
+               (click)="colorSelected(color)" [style.background-color]="color[0]" class="color-palette">
+          </div>
+          <div *ngIf = "!readonly" [style.background-color]="color[0]" class="color-palette-zoom">
+
+          </div>
+        </div>
+      </div>
+      <div class="custom-color-box">
+        <input [disabled]="disabled" [style.width]="getInputWidth()" (keyup)="colorChanged()"
+               [(ngModel)]="selectedColor"
+               placeholder="Enter custom color" class="form-control custom-color-input">
+        <div [style.background-color]="selectedColor" class="color-preview"></div>
+      </div>
+    </div>
+  </div>
+</div>

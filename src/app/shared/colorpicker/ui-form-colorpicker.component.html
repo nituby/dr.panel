@@ -1,0 +1,13 @@
+<ui-form-picker
+  #picker
+  [autoWidth]="true"
+  [text]="selectedColor"
+  [disabledPicker]="disabledPicker"
+  [readOnlyPicker]="readOnlyPicker">
+
+  <div class="padded">
+    <ui-form-color [(ngModel)]="selectedColor" [standalone]="false" (onChange)="colorChanged($event)"
+                   [height]="height" [width]="width" (selected)="colorSelected($event)"></ui-form-color>
+  </div>
+
+</ui-form-picker>

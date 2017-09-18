@@ -1,0 +1,24 @@
+<div [class]="extraCssClass"
+     [ngClass]="{'field-container': true, 'picker': true, 'picker-auto-width': autoWidth, 'picker-top': pickerOnTop, 'picker-right': pickerOnRight}">
+  <div class="input-group" [ngClass]="{'visible-group': visible, 'disabled-color-picker': disabledPicker}">
+    <!--<input #placeholder
+           [id]="id"
+           type="text"
+           (focus)="onPlaceholderFocus($event)"
+           (blur)="onPlaceholderBlur($event)"
+           class="form-control form-control-placeholder"
+           [ngClass]="{'form-field-focus': visible, 'disabled-picker': disabledPicker}"
+           [disabled]="disabled"
+           readonly="readonly"
+           [placeholder]="placeholderText"
+           [value]="text"/>-->
+    <span  (click)="show()" [ngClass]="{'disabled-picker': disabledPicker}" class="input-group-addon"><img [src]="pickerIcon"/></span>
+
+  </div>
+
+
+  <div #picker class="picker-container" *ngIf="visible">
+    <ng-content></ng-content>
+  </div>
+
+</div>

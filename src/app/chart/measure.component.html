@@ -17,3 +17,9 @@
       </div>
   </div>
 </div>
+<div  dragDirective [dragHightlight]="'highlight'" (releaseDrop)="releaseDrop($event)" class="dragItem" >
+      {{population}}
+</div>
+<div dropDirective (dropEvent)="addDropItem($event)" (dragenterEvent)="dragEnter($event)" (dragleaveEvent)="dragLeave()" class="droppable" [dropHighlight]="'highlight'" >
+    AS
+</div>

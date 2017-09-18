@@ -16,7 +16,10 @@ import { GraphInputComponent } from './graph-info/graph-input.component';
 import { GraphPublishComponent } from './graph-info/graph-publish.component';
 import { SelectChartComponent } from './select-chart/select-chart.component';
 import { AngularMultiSelectModule } from 'angular2-multiselect-checkbox-dropdown/angular2-multiselect-dropdown';
-// import { UIFormSelectModule } from './shared/select/ui-form-select.module';
+import { DragDropDirectiveModule} from "angular4-drag-drop";
+import { UIFormColorModule} from './shared/color/ui-form-color.module';
+import { UIFormColorpickerModule} from './shared/colorpicker/ui-form-colorpicker.module';
+import { UIFormPickerModule} from './shared/picker/ui-form-picker.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,13 +34,17 @@ import { AngularMultiSelectModule } from 'angular2-multiselect-checkbox-dropdown
     GraphDrawComponent,
     GraphInputComponent,
     GraphPublishComponent,
-    SelectChartComponent
+    SelectChartComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularMultiSelectModule,
-    FormsModule
+    FormsModule,
+    DragDropDirectiveModule,
+    UIFormColorModule,
+    UIFormColorpickerModule,
+    UIFormPickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
