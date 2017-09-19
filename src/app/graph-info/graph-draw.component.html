@@ -2,3 +2,6 @@
             Content 2
         </div>
         <app-graph-publish (selectedUsers) = "selectUsers($event)"></app-graph-publish>
+        <div *ngIf = "userError" class="alert alert-danger" role="alert">
+            <strong>Oh snap!</strong> Please select at least one user.
+        </div>

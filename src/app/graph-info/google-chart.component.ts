@@ -1,21 +1,23 @@
-import { Component, OnInit} from '@angular/core';
+import { Component} from '@angular/core';
 declare var google:any;
 @Component({
   selector: 'chart'
 })
-export class GoogleChartComponent implements OnInit {
+export class GoogleChartComponent {
   private static googleLoaded:any;
 
   constructor(){
-    //   console.log("Here is GoogleChartComponent")
+      console.log("Here is GoogleChartComponent");
+      this.loadGoogleGraph();
   }
 
   getGoogle() {
       return google;
   }
-  ngOnInit() {
-    // console.log('ngOnInit');
-    if(!GoogleChartComponent.googleLoaded) {
+
+
+  loadGoogleGraph() {
+        if(!GoogleChartComponent.googleLoaded) {
       GoogleChartComponent.googleLoaded = true;
       google.charts.load('current',  {packages: ['corechart']});
     }

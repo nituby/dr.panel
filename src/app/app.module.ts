@@ -21,6 +21,9 @@ import { UIFormColorModule} from './shared/color/ui-form-color.module';
 import { UIFormColorpickerModule} from './shared/colorpicker/ui-form-colorpicker.module';
 import { UIFormPickerModule} from './shared/picker/ui-form-picker.module';
 import { MarkGraphService} from './services/mark-graph.service';
+import { DrService} from './services/dr.service';
+import { APIService} from './services/api.service';
+import { HttpModule } from '@angular/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,12 +45,12 @@ import { MarkGraphService} from './services/mark-graph.service';
     AppRoutingModule,
     AngularMultiSelectModule,
     FormsModule,
-    // DragDropDirectiveModule,
+    HttpModule,
     UIFormColorModule,
     UIFormColorpickerModule,
     UIFormPickerModule
   ],
-  providers: [MarkGraphService],
+  providers: [MarkGraphService,DrService,APIService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
