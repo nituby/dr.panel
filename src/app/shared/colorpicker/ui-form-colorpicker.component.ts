@@ -65,7 +65,7 @@ export class UIFormColorpickerComponent implements ControlValueAccessor {
   colorSelected(color: string) {
     this.selectedColor = color;
     this.propagateChange(this.selectedColor);
-    this.selected.emit(color[ 1 ]);
+    this.selected.emit(color);
 
     this.setPickerColor(color);
     this.picker.hide();

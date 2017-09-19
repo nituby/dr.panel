@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,OnInit,Output,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-graph-publish',
@@ -8,6 +8,7 @@ export class GraphPublishComponent implements OnInit{
   dropdownList = [];
     selectedItems = [];
     dropdownSettings = {};
+    @Output() selectedUsers = new EventEmitter();;
     ngOnInit(){
         this.dropdownList = [
                               {"id":1,"itemName":"user1"},
@@ -30,17 +31,15 @@ export class GraphPublishComponent implements OnInit{
                                 };            
     }
     onItemSelect(item:any){
-        console.log(item);
-        console.log(this.selectedItems);
+        this.selectedUsers.emit(this.selectedItems);
     }
     OnItemDeSelect(item:any){
-        console.log(item);
-        console.log(this.selectedItems);
+        this.selectedUsers.emit(this.selectedItems);
     }
     onSelectAll(items: any){
-        console.log(items);
+        this.selectedUsers.emit(this.selectedItems);
     }
     onDeSelectAll(items: any){
-        console.log(items);
+        this.selectedUsers.emit(this.selectedItems);
     }
 }

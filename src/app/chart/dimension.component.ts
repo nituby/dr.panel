@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-dimension',
   templateUrl: './dimension.component.html'
 })
-export class DimensionComponent {
+export class DimensionComponent  {
   title = 'app';
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MarkGraphService } from '../services/mark-graph.service';
 
 @Component({
   selector: 'app-mark',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class MarkComponent {
   colorValue = 'green';
+  selectedColor = '';
+
+constructor(private markGraphService: MarkGraphService) { }
+
+
+  selectColor(data) {
+    console.log(data);
+    this.markGraphService.changeMessage(data);
+    this.markGraphService.currentMessage.subscribe(selectedColor => this.selectedColor = selectedColor);
+    console.log(this.selectedColor);
+  }
 }
